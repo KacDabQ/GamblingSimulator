@@ -8,6 +8,8 @@ This is gambling simulator :)
 
 ## COMMANDS
 
+double - Double, or nothing!
+help - Commands!
 roullete - Play roullete! (Bet, and then Numbers!)
 wallet - Ckeck your wallet!
 work - You will work for some money!
