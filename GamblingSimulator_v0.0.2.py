@@ -1,6 +1,6 @@
 import random
 import time
-print('WELCOME TO GAMBLING SIMULATOR v0.0.1')
+print('WELCOME TO GAMBLING SIMULATOR v0.0.2')
 storages = {'Wallet': './data/wallet.txt', 'Inventory': './data/inventory.txt'} # Paths
 command = ''
 
@@ -15,7 +15,7 @@ while command != 'quit':
     command = input('>> ')
 
     if command == 'help':
-        print('roullete, wallet, work')
+        print('double, help, roullete, wallet, work')
     
     elif command == 'work':
         moneyAmount = random.randint(5,20)
@@ -67,5 +67,28 @@ while command != 'quit':
                     walletUpdate.write(str(wallet))
                     walletUpdate.close()
                     break
+        else:
+            print('You either have bet too small amount of $, or you are too poor.')
+
+    elif command == 'double':
+        print('Double or nothing!')
+        bet = int(input('How much do you want to bet (at least 5$): ')) # Be
+        if wallet - bet >= 0 and bet >= 5 and wallet >= 0:
+            wallet = wallet - bet
+            walletUpdate = open(storages['Wallet'], 'w')
+            walletUpdate.write(str(wallet))
+            walletUpdate.close()
+            didYouWin = random.randint(0,1)
+            time.sleep(random.randint(2,4))
+            if didYouWin == 1: # You won
+                winnings = bet * 2
+                print('YOU WON!!!')
+                print('You have earned', int(winnings), '$!')
+                wallet = wallet + int(winnings)
+                walletUpdate = open(storages['Wallet'], 'w')
+                walletUpdate.write(str(wallet))
+                walletUpdate.close()
+            else: # You lose
+                print('You lose.')
         else:
             print('You either have bet too small amount of $, or you are too poor.')
