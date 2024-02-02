@@ -15,7 +15,7 @@ while command != 'quit':
     command = input('>> ')
 
     if command == 'help':
-        print('roullete, wallet, work')
+        print('crime, double, roullete, wallet, work')
     
     elif command == 'work':
         moneyAmount = random.randint(2,7)
