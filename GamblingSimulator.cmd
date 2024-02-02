@@ -1,3 +1,3 @@
 @echo off
 
-python GamblingSimulator_v0.2.0.py
+python GamblingSimulator_v0.2.1.py
