@@ -8,6 +8,7 @@ This is gambling simulator :)
 
 ## COMMANDS
 
+crime - More money than work, but risky!
 double - Double, or nothing!
 help - Commands!
 roullete - Play roullete! (Bet, and then Numbers!)
