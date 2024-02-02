@@ -1,6 +1,6 @@
 import random
 import time
-print('WELCOME TO GAMBLING SIMULATOR v0.1.0')
+print('WELCOME TO GAMBLING SIMULATOR v0.1.1')
 storages = {'Wallet': './data/wallet.txt', 'Inventory': './data/inventory.txt'} # Paths
 command = ''
 
