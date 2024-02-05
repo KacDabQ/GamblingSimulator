@@ -176,7 +176,7 @@ while command != 'quit':
             elif winValue == 3:
                 winnings = bet * 800
                 winnings = round(winnings, 0)
-                print('JACKPOT!!!')
+                print('JACKPOT!!!') # Jackpot
                 print('You have earned', int(winnings), '$!')
                 wallet = wallet + int(winnings)
                 walletUpdate = open(storages['Wallet'], 'w')
